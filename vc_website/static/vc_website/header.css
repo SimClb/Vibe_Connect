@@ -1,0 +1,111 @@
+header {
+  height: 100vh;
+  position: relative;
+}
+header .nav {
+  position: fixed;
+  width: 100%;
+}
+header .nav img {
+  width: 150px;
+  margin: 10px 0px;
+}
+header .nav__mobile .burger {
+  position: absolute;
+  top: 30px;
+  right: 37px;
+  width: 25px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .nav__mobile .burger:hover {
+  cursor: pointer;
+}
+header .nav__mobile .burger .line {
+  width: 100%;
+  height: 5px;
+  background-color: #ae00ff;
+  border-radius: 2px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+header .nav__mobile .cross .line:nth-child(1) {
+  transform: translateY(2px) rotate(45deg);
+}
+header .nav__mobile .cross .line:nth-child(2) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+header .nav__mobile .menu {
+  position: absolute;
+  right: -150%;
+  width: 100%;
+  height: 90vh;
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  background-color: rgba(212, 184, 215, 0.7411764706);
+  transition: all 250ms ease-in-out;
+}
+header .nav__mobile .menu a, header .nav__mobile .menu div {
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 15px 0px;
+  margin-right: 30px;
+  color: #333;
+}
+header .nav__mobile .menu a i, header .nav__mobile .menu div i {
+  width: 40px;
+  text-align: center;
+  transition: all 320ms ease-in-out;
+}
+header .nav__mobile .menu a #angle, header .nav__mobile .menu a ul, header .nav__mobile .menu div #angle, header .nav__mobile .menu div ul {
+  transition: all 150ms ease-in-out;
+}
+header .nav__mobile .menu a:focus #up, header .nav__mobile .menu a:focus #up1, header .nav__mobile .menu div:focus #up, header .nav__mobile .menu div:focus #up1 {
+  transform: translateY(-10px);
+}
+header .nav__mobile .menu div ul {
+  list-style-type: none;
+  margin: -5px 30px 0px 0px;
+  display: none;
+}
+header .nav__mobile .menu div ul li {
+  margin: 4px 0px;
+}
+header .nav__mobile .menu div ul li a {
+  font-size: 1em;
+}
+header .nav__mobile .menu div:focus i {
+  transform: translateY(20px);
+}
+header .nav__mobile .menu div:hover {
+  cursor: pointer;
+}
+header .nav__desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .nav__mobile {
+    display: none;
+  }
+  .nav__desktop {
+    top: 10px;
+    display: flex;
+  }
+  .nav__desktop .links {
+    display: flex;
+  }
+  .nav__desktop .links a, .nav__desktop .links p {
+    color: #333;
+  }
+  .nav__desktop .links p i {
+    transition: all 150ms ease-in-out;
+  }
+  .nav__desktop .links p:hover i {
+    transform: rotate(90deg);
+  }
+}/*# sourceMappingURL=header.css.map */
