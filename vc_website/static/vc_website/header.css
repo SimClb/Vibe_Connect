@@ -1,24 +1,36 @@
 header {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 header .nav {
   position: fixed;
+  left: -25px;
   width: 100%;
+  z-index: 2;
 }
 header .nav img {
-  width: 150px;
+  width: 250px;
+  height: 53px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+header .nav__mobile img {
+  left: -25px;
   margin: 10px 0px;
 }
 header .nav__mobile .burger {
   position: absolute;
   top: 30px;
-  right: 37px;
+  right: 10px;
   width: 25px;
   height: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 6;
 }
 header .nav__mobile .burger:hover {
   cursor: pointer;
@@ -26,7 +38,7 @@ header .nav__mobile .burger:hover {
 header .nav__mobile .burger .line {
   width: 100%;
   height: 5px;
-  background-color: #ae00ff;
+  background-color: #8e55ed;
   border-radius: 2px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
@@ -37,16 +49,18 @@ header .nav__mobile .cross .line:nth-child(2) {
   transform: translateY(-8px) rotate(-45deg);
 }
 header .nav__mobile .menu {
+  z-index: 5;
   position: absolute;
   right: -150%;
-  width: 100%;
-  height: 90vh;
-  padding: 10px 0px 0px 0px;
+  top: 0px;
+  width: 90%;
+  height: 100vh;
+  box-shadow: 30px 50px 100px #85888C;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: right;
-  background-color: rgba(212, 184, 215, 0.7411764706);
+  background-color: #d4b8d7;
   transition: all 250ms ease-in-out;
 }
 header .nav__mobile .menu a, header .nav__mobile .menu div {
@@ -84,28 +98,29 @@ header .nav__mobile .menu div:focus i {
 header .nav__mobile .menu div:hover {
   cursor: pointer;
 }
+header .nav__mobile .video {
+  z-index: -1;
+}
 header .nav__desktop {
   display: none;
 }
-
-@media (min-width: 600px) {
-  .nav__mobile {
-    display: none;
-  }
-  .nav__desktop {
-    top: 10px;
-    display: flex;
-  }
-  .nav__desktop .links {
-    display: flex;
-  }
-  .nav__desktop .links a, .nav__desktop .links p {
-    color: #333;
-  }
-  .nav__desktop .links p i {
-    transition: all 150ms ease-in-out;
-  }
-  .nav__desktop .links p:hover i {
-    transform: rotate(90deg);
-  }
+header video {
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+}
+header .background_nav {
+  width: 100%;
+  height: 71px;
+  background-color: #d4b8d7;
+  position: fixed;
+  top: -71px;
+  z-index: 1;
+  transition: all 150ms ease-in;
+}
+header .background_nav__show {
+  top: 0px;
 }/*# sourceMappingURL=header.css.map */

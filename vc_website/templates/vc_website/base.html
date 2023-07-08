@@ -11,8 +11,8 @@
     <!--LINK-->
     <link rel="stylesheet" href="{% static 'vc_website/main.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/header.css' %}">
+    <link rel="stylesheet" href="{% static 'vc_website/desktop_header.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/mailer.css' %}">
-    <link rel="stylesheet" href="{% static 'vc_website/nav.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/product.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/footer.css' %}">
     <!-------->
@@ -29,7 +29,7 @@
         <nav class="nav nav__mobile">
 
             <a href="{% url 'homepage' %}" id="logoLink" class="logoLink">
-                <img src="{% static 'logo.png' %}" alt="logo Vibe Connect" class="logoImg">
+                <img src="{% static 'vibeconnect.png' %}" alt="logo Vibe Connect" class="logoImg">
             </a>
 
             <div class="burger" id="burger" onclick="burgerMenu()">
@@ -38,35 +38,52 @@
             </div>
 
             <div class="menu" id="menu">
-                <a href="#">Home <i class="fa-solid fa-house" id="up"></i></a>
 
-                <div class="div_angle">
-                    Product 
-                    <i class="fa-solid fa-angle-right"></i>
-                
-                    <ul>
+                <ul>
+                    <li>
+                        <a href="#">Home <i class="fa-solid fa-house" id="up"></i></a>
+                    </li>
+                    <li>
+                        <a>Product <i class="fa-solid fa-angle-right"></i></a>
+                        <ul>
+                            <li><a href="#">Watch</a></li>
+                            <li><a href="#">Button</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact <i class="fa-solid fa-envelope" id="up1"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            
+
+
+        </nav>
+
+        <nav role="navigation" class="nav primary-navigation">
+            <a href="{% url 'homepage' %}" id="logoLink" class="logoLink">
+                <img src="{% static 'vibeconnect.png' %}" alt="logo Vibe Connect" class="logoImg">
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="li_center"><a>Product <i class="fa-solid fa-angle-right"></i></a>
+                    <ul class="dropdown">
                         <li><a href="#">Watch</a></li>
                         <li><a href="#">Button</a></li>
                         <li><a href="#">Dashboard</a></li>
                     </ul>
-                </div>
-
-                <a href="#">Contact <i class="fa-solid fa-envelope" id="up1"></i></a>
-            </div>
-            
-            <div class="background_nav"></div>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
 
-        <nav class="nav nav__desktop">
-            <a href="{% url 'homepage' %}" id="logoLink1" class="logoLink1">
-                <img src="{% static 'logo.png' %}" alt="logo Vibe Connect" class="logoImg">
-            </a>
-            <div class="links">
-                <a href="#">Home</a>
-                <p>Product <i class="fa-solid fa-angle-right"></i></p>
-                <a href="#">Contact</a>
-            </div>
-        </nav>
+        <video autoplay muted loop id="background_video">
+            <source src="{% static 'headerV.webm' %}" type="video/webm">
+        </video>
+
+        <div class="background_nav" id="backgroundNav"></div>
     </header>
 
     {% block content %}{% endblock content %}

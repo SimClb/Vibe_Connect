@@ -1,0 +1,123 @@
+// colors
+
+$navbar: #e5e3e6;
+$links: #333;
+$colorLogo: #8e55ed;
+
+
+@media (min-width: 600px) {
+
+
+    header {
+
+        .nav {
+            &__mobile {
+                display: none;
+            }
+
+        }
+
+        nav {
+            &.primary-navigation {
+                display: flex;
+                position: fixed;
+                top: 10px;
+
+                text-align: center;
+                font-size: 16px;
+
+                ul {
+                    margin: 15px 0px 0px 120px;
+
+                    li {
+                        list-style: none;
+                        margin: 0 auto;
+                        display: inline-block;
+                        padding: 0 30px;
+                        position: relative;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 5px 30px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $links;
+                            transition: all 150 ease-in-out;
+
+                            &:hover {
+                                color: $colorLogo;
+                            }
+                        }
+
+                        ul {
+                            visibility: hidden;
+                            opacity: 0;
+                            position: absolute;
+                            padding-left: 0;
+                            left: 0;
+                            display: none;
+                            background: white;
+
+                            li {
+                                clear: both;
+                                width: 100%;
+                                text-align: left;
+                                margin-bottom: 20px;
+                                border-style: none;
+
+                                a {
+                                    transition: all 0.5s ease;
+                                    &:hover {
+                                        padding-left: 10px;
+                                        border-left: 2px solid $colorLogo;
+                                        transition: all 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .li_center {
+                    border-left: 2px solid $colorLogo;
+                    border-right: 2px solid $colorLogo;
+
+                    i {
+                        transition: all 100ms ease-in-out;
+                    }
+
+                    &:hover {
+                        i {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                ul li:hover>ul,
+                ul li ul:hover {
+                    margin-top: 8px;
+                    margin-left: 0px;
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                    min-width: 250px;
+                    text-align: left;
+                    padding-top: 20px;
+                    box-shadow: 0px 3px 5px -1px #ccc;
+                    border-radius: 2px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .primary-navigation {
+        display: none;
+    }
+}

@@ -1,3 +1,22 @@
+// navbar 
+function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 100) {
+        document.getElementById("backgroundNav").classList.add("background_nav__show");
+    } else {
+        document.getElementById("backgroundNav").classList.remove("background_nav__show");
+    }
+}
+
+let ticking = false;
+window.addEventListener('scroll', function (e) {
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            scrollFunction();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
 
 // burger menu:
 
@@ -6,7 +25,7 @@ let count = 0;
 
 function burgerMenu() {
     if (count % 2 != 0) {
-        document.getElementById('menu').style.right = '0px';
+        document.getElementById('menu').style.right = '-25px';
         burger.classList.add('cross');
     }
     else {
@@ -15,4 +34,5 @@ function burgerMenu() {
     }
     count += 1;
 }
+
 
