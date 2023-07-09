@@ -5,21 +5,19 @@ header {
 }
 header .nav {
   position: fixed;
-  left: -25px;
   width: 100%;
   z-index: 2;
 }
 header .nav img {
-  width: 250px;
-  height: 53px;
+  width: 80px;
+  height: 36px;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 3;
 }
 header .nav__mobile img {
-  left: -25px;
-  margin: 10px 0px;
+  margin: 17.5px 0px 0px 10px;
 }
 header .nav__mobile .burger {
   position: absolute;
@@ -30,7 +28,7 @@ header .nav__mobile .burger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 6;
+  z-index: 7;
 }
 header .nav__mobile .burger:hover {
   cursor: pointer;
@@ -49,7 +47,7 @@ header .nav__mobile .cross .line:nth-child(2) {
   transform: translateY(-8px) rotate(-45deg);
 }
 header .nav__mobile .menu {
-  z-index: 5;
+  z-index: 6;
   position: absolute;
   right: -150%;
   top: 0px;
@@ -57,46 +55,58 @@ header .nav__mobile .menu {
   height: 100vh;
   box-shadow: 30px 50px 100px #85888C;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
-  background-color: #d4b8d7;
+  align-items: center;
+  text-align: left;
+  background-color: #2e2e35;
   transition: all 250ms ease-in-out;
 }
-header .nav__mobile .menu a, header .nav__mobile .menu div {
-  font-size: 1.5em;
-  text-decoration: none;
-  margin: 15px 0px;
-  margin-right: 30px;
-  color: #333;
-}
-header .nav__mobile .menu a i, header .nav__mobile .menu div i {
-  width: 40px;
-  text-align: center;
-  transition: all 320ms ease-in-out;
-}
-header .nav__mobile .menu a #angle, header .nav__mobile .menu a ul, header .nav__mobile .menu div #angle, header .nav__mobile .menu div ul {
-  transition: all 150ms ease-in-out;
-}
-header .nav__mobile .menu a:focus #up, header .nav__mobile .menu a:focus #up1, header .nav__mobile .menu div:focus #up, header .nav__mobile .menu div:focus #up1 {
-  transform: translateY(-10px);
-}
-header .nav__mobile .menu div ul {
+header .nav__mobile .menu ul {
   list-style-type: none;
-  margin: -5px 30px 0px 0px;
+}
+header .nav__mobile .menu ul a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1.4em;
+}
+header .nav__mobile .menu ul li {
+  margin: 20px 0px;
+  /* For Mozilla Firefox */
+}
+header .nav__mobile .menu ul li ::selection {
+  color: none;
+  background: none;
+}
+header .nav__mobile .menu ul li ::-moz-selection {
+  color: none;
+  background: none;
+}
+header .nav__mobile .menu ul li i {
+  color: #8e55ed;
+}
+header .nav__mobile .menu ul li i,
+header .nav__mobile .menu ul li ul {
+  transition: all 250ms ease-in-out;
+}
+header .nav__mobile .menu ul li ul {
   display: none;
 }
-header .nav__mobile .menu div ul li {
-  margin: 4px 0px;
+header .nav__mobile .menu ul li ul li {
+  margin: 10px;
+  border-left: 3px solid #8e55ed;
+  padding: 0px;
+  padding-left: 10px;
 }
-header .nav__mobile .menu div ul li a {
-  font-size: 1em;
+header .nav__mobile .menu ul li ul a {
+  font-size: 1.1em;
 }
-header .nav__mobile .menu div:focus i {
-  transform: translateY(20px);
-}
-header .nav__mobile .menu div:hover {
+header .nav__mobile .menu ul li:hover {
   cursor: pointer;
+}
+header .nav__mobile .menu ul li .angleDownMobile {
+  transform: rotate(90deg);
+}
+header .nav__mobile .menu ul li .showUlMobile {
+  display: block;
 }
 header .nav__mobile .video {
   z-index: -1;
@@ -115,7 +125,7 @@ header video {
 header .background_nav {
   width: 100%;
   height: 71px;
-  background-color: #d4b8d7;
+  background-color: #18181b;
   position: fixed;
   top: -71px;
   z-index: 1;
@@ -123,4 +133,45 @@ header .background_nav {
 }
 header .background_nav__show {
   top: 0px;
+}
+header .absoluteBtn {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 80px;
+}
+header .absoluteBtn .divcoverMore {
+  position: relative;
+  width: 200px;
+  height: 30px;
+  margin: 0px auto;
+  border: 3px solid #8e55ed;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #8e55ed;
+  overflow: hidden;
+}
+header .absoluteBtn .divcoverMore .bgLink {
+  width: 201px;
+  height: 31px;
+  background-color: #8e55ed;
+  position: absolute;
+  left: -201px;
+  transition: all 350ms ease-in;
+  z-index: 0;
+}
+header .absoluteBtn .divcoverMore i {
+  transition: transform 550ms ease-in-out, color 50ms ease-in-out;
+  margin-right: 10px;
+  z-index: 1;
+}
+header .absoluteBtn .divcoverMore:hover i, header .absoluteBtn .divcoverMore:focus i {
+  transform: translateX(100px);
+  color: #f1f1f1;
+}
+header .absoluteBtn .divcoverMore:hover .bgLink, header .absoluteBtn .divcoverMore:focus .bgLink {
+  left: 0px;
 }/*# sourceMappingURL=header.css.map */

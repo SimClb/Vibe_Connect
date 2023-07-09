@@ -1,13 +1,26 @@
+$navbar: #d4b8d7;
+$links: #333;
+$logo: #8e55ed;
+
+$lightBlack: #1f1f23;
+$black: #0e0e10;
+$middleBlack: #18181b;
+$heavyBlack: #2e2e35;
+
+$white: #f1f1f1;
+$darkerWhite: #dedede;
+
 footer {
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: $middleBlack;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     img {
-        width: 180px;
+        width: 100px;
+        height: 45px;
         margin: 30px auto 0px;
     }
 
@@ -15,13 +28,14 @@ footer {
     .cfooter {
         width: 70%;
         margin: auto;
-        color: #333;
+        color: $darkerWhite;
 
         a {
-            color: #333;
+            color: $darkerWhite;
         }
 
         h4 {
+            color: $white;
             font-size: 1.2em;
             margin: 30px 0px;
         }
@@ -45,6 +59,7 @@ footer {
 
     .copyright {
         h5 {
+            color: $white;
             margin-top: 60px;
             text-align: center;
         }

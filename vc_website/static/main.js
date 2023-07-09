@@ -35,4 +35,35 @@ function burgerMenu() {
     count += 1;
 }
 
+// dropdown menu mobile
 
+let angle = document.getElementById('angleDownMobile');
+let ul = document.getElementById('ulMenuMobile');
+let counterMobile = 0;
+
+function dropDownMenu() {
+    if (counterMobile % 2 != 0) {
+        angle.classList.add('angleDownMobile');
+        ul.classList.add('showUlMobile');
+    }
+    else {
+        angle.classList.remove('angleDownMobile');
+        ul.classList.remove('showUlMobile');
+    }
+    counterMobile += 1;
+}
+
+
+function removeMenu() {
+    document.getElementById('menu').style.right = '-150%';
+    burger.classList.remove('cross');
+    count += 1;
+
+    if (counterMobile % 2 == 0) {
+
+        angle.classList.remove('angleDownMobile');
+        ul.classList.remove('showUlMobile');
+
+        counterMobile += 1;
+    }
+}

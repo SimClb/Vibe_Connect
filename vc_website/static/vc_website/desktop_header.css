@@ -21,13 +21,14 @@
     text-decoration: none;
     text-align: center;
     padding: 5px 30px;
+    color: white;
   }
   header nav.primary-navigation ul li:hover {
     cursor: pointer;
   }
   header nav.primary-navigation ul li a {
     text-decoration: none;
-    color: #333;
+    color: #f1f1f1;
     transition: all 150 ease-in-out;
   }
   header nav.primary-navigation ul li a:hover {
@@ -40,7 +41,7 @@
     padding-left: 0;
     left: 0;
     display: none;
-    background: white;
+    background: #2e2e35;
   }
   header nav.primary-navigation ul li ul li {
     clear: both;
@@ -69,7 +70,7 @@
   }
   header nav.primary-navigation ul li:hover > ul,
 header nav.primary-navigation ul li ul:hover {
-    margin-top: 8px;
+    margin-top: 7px;
     margin-left: 0px;
     visibility: visible;
     opacity: 1;
@@ -77,7 +78,7 @@ header nav.primary-navigation ul li ul:hover {
     min-width: 250px;
     text-align: left;
     padding-top: 20px;
-    box-shadow: 0px 3px 5px -1px #ccc;
+    box-shadow: 0px 3px 5px -1px #555555;
     border-radius: 2px;
   }
 }

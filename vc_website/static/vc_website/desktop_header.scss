@@ -1,8 +1,14 @@
 // colors
-
-$navbar: #e5e3e6;
+$navbar: #d4b8d7;
 $links: #333;
-$colorLogo: #8e55ed;
+$logo: #8e55ed;
+
+$lightBlack: #1f1f23;
+$black: #0e0e10;
+$middleBlack: #18181b;
+$heavyBlack: #2e2e35;
+
+$white: #f1f1f1;
 
 
 @media (min-width: 600px) {
@@ -38,6 +44,7 @@ $colorLogo: #8e55ed;
                         text-decoration: none;
                         text-align: center;
                         padding: 5px 30px;
+                        color: white;
 
                         &:hover {
                             cursor: pointer;
@@ -45,11 +52,11 @@ $colorLogo: #8e55ed;
 
                         a {
                             text-decoration: none;
-                            color: $links;
+                            color: $white;
                             transition: all 150 ease-in-out;
 
                             &:hover {
-                                color: $colorLogo;
+                                color: $logo;
                             }
                         }
 
@@ -60,7 +67,7 @@ $colorLogo: #8e55ed;
                             padding-left: 0;
                             left: 0;
                             display: none;
-                            background: white;
+                            background: $heavyBlack;
 
                             li {
                                 clear: both;
@@ -73,7 +80,7 @@ $colorLogo: #8e55ed;
                                     transition: all 0.5s ease;
                                     &:hover {
                                         padding-left: 10px;
-                                        border-left: 2px solid $colorLogo;
+                                        border-left: 2px solid $logo;
                                         transition: all 0.3s ease;
                                     }
                                 }
@@ -83,8 +90,8 @@ $colorLogo: #8e55ed;
                 }
 
                 .li_center {
-                    border-left: 2px solid $colorLogo;
-                    border-right: 2px solid $colorLogo;
+                    border-left: 2px solid $logo;
+                    border-right: 2px solid $logo;
 
                     i {
                         transition: all 100ms ease-in-out;
@@ -99,7 +106,7 @@ $colorLogo: #8e55ed;
 
                 ul li:hover>ul,
                 ul li ul:hover {
-                    margin-top: 8px;
+                    margin-top: 7px;
                     margin-left: 0px;
                     visibility: visible;
                     opacity: 1;
@@ -107,7 +114,7 @@ $colorLogo: #8e55ed;
                     min-width: 250px;
                     text-align: left;
                     padding-top: 20px;
-                    box-shadow: 0px 3px 5px -1px #ccc;
+                    box-shadow: 0px 3px 5px -1px #555555;
                     border-radius: 2px;
                 }
 
