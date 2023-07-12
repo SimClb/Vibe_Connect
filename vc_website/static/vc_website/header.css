@@ -6,18 +6,16 @@ header {
 header .nav {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 header .nav img {
   width: 80px;
   height: 36px;
+  margin: 17.5px 0px 0px 10px;
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 3;
-}
-header .nav__mobile img {
-  margin: 17.5px 0px 0px 10px;
+  z-index: 4;
 }
 header .nav__mobile .burger {
   position: absolute;
@@ -28,7 +26,7 @@ header .nav__mobile .burger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 7;
+  z-index: 8;
 }
 header .nav__mobile .burger:hover {
   cursor: pointer;
@@ -47,7 +45,7 @@ header .nav__mobile .cross .line:nth-child(2) {
   transform: translateY(-8px) rotate(-45deg);
 }
 header .nav__mobile .menu {
-  z-index: 6;
+  z-index: 7;
   position: absolute;
   right: -150%;
   top: 0px;
@@ -128,7 +126,7 @@ header .background_nav {
   background-color: #18181b;
   position: fixed;
   top: -71px;
-  z-index: 1;
+  z-index: 2;
   transition: all 150ms ease-in;
 }
 header .background_nav__show {

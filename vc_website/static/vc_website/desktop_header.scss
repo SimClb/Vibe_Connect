@@ -27,13 +27,16 @@ $white: #f1f1f1;
             &.primary-navigation {
                 display: flex;
                 position: fixed;
-                top: 10px;
 
                 text-align: center;
                 font-size: 16px;
 
+                img {
+                    margin: 17.5px 0px 0px 20px;
+                }
+
                 ul {
-                    margin: 15px 0px 0px 120px;
+                    margin: 22px 0px 0px 60px;
 
                     li {
                         list-style: none;
@@ -106,7 +109,7 @@ $white: #f1f1f1;
 
                 ul li:hover>ul,
                 ul li ul:hover {
-                    margin-top: 7px;
+                    margin-top: 5px;
                     margin-left: 0px;
                     visibility: visible;
                     opacity: 1;

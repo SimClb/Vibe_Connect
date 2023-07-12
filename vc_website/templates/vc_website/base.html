@@ -9,22 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--LINK-->
-    <link rel="stylesheet" href="{% static 'vc_website/main.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/header.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/desktop_header.css' %}">
-    <link rel="stylesheet" href="{% static 'vc_website/mailer.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/product.css' %}">
     <link rel="stylesheet" href="{% static 'vc_website/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'vc_website/main.css' %}">
     <!-------->
 
     <!--KIT FONT AWESOME-->
     <script src="https://kit.fontawesome.com/28921dc381.js" crossorigin="anonymous"></script>
     <!-------------------->
 
+    <!--FONT-->
+    <link rel="stylesheet" href="https://use.typekit.net/cad5hbs.css">
+    <!-------->
+
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         
         <nav class="nav nav__mobile">
 
@@ -41,19 +44,19 @@
 
                 <ul>
                     <li>
-                        <a href="#" onclick="removeMenu()"><i class="fa-solid fa-house" id="up"></i> Home</a>
+                        <a href="#home" onclick="removeMenu()"><i class="fa-solid fa-house" id="up"></i> Home</a>
                     </li>
                     <li class="dropdown">
                         <a onclick="dropDownMenu()"><i class="fa-solid fa-angle-right" id="angleDownMobile"></i> Product</a>
 
                         <ul id="ulMenuMobile">
-                            <li><a href="#" onclick="removeMenu()">Watch</a></li>
-                            <li><a href="#" onclick="removeMenu()">Button</a></li>
-                            <li><a href="#" onclick="removeMenu()">Dashboard</a></li>
+                            <li><a href="#watch" onclick="removeMenu()">Watch</a></li>
+                            <li><a href="#button" onclick="removeMenu()">Button</a></li>
+                            <!--<li><a href="#" onclick="removeMenu()">Dashboard</a></li>-->
                         </ul>
                     </li>
                     <li>
-                        <a href="#" onclick="removeMenu()"><i class="fa-solid fa-envelope" id="up1"></i> Contact</a>
+                        <a href="https://calendly.com/vibeconnect/call-event-sun-eater" target="_blank" onclick="removeMenu()"><i class="fa-solid fa-envelope" id="up1"></i> Contact</a>
                     </li>
                 </ul>
 
@@ -68,15 +71,15 @@
                 <img src="{% static 'logoNiew.png' %}" alt="logo Vibe Connect" class="logoImg">
             </a>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li class="li_center"><a>Product <i class="fa-solid fa-angle-right"></i></a>
                     <ul class="dropdown">
-                        <li><a href="#">Watch</a></li>
-                        <li><a href="#">Button</a></li>
-                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#watch">Watch</a></li>
+                        <li><a href="#button">Button</a></li>
+                        <!--<li><a href="#">Dashboard</a></li>-->
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="https://calendly.com/vibeconnect/call-event-sun-eater" target="_blank">Contact</a></li>
             </ul>
         </nav>
 
@@ -87,7 +90,7 @@
         <div class="background_nav" id="backgroundNav"></div>
 
         <div class="absoluteBtn">
-            <a href="#" class="divcoverMore">
+            <a href="#seeMore" class="divcoverMore">
 
                 <i class="fa-solid fa-arrow-right"></i>
                 Discover More

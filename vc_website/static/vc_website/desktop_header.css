@@ -5,12 +5,14 @@
   header nav.primary-navigation {
     display: flex;
     position: fixed;
-    top: 10px;
     text-align: center;
     font-size: 16px;
   }
+  header nav.primary-navigation img {
+    margin: 17.5px 0px 0px 20px;
+  }
   header nav.primary-navigation ul {
-    margin: 15px 0px 0px 120px;
+    margin: 22px 0px 0px 60px;
   }
   header nav.primary-navigation ul li {
     list-style: none;
@@ -70,7 +72,7 @@
   }
   header nav.primary-navigation ul li:hover > ul,
 header nav.primary-navigation ul li ul:hover {
-    margin-top: 7px;
+    margin-top: 5px;
     margin-left: 0px;
     visibility: visible;
     opacity: 1;

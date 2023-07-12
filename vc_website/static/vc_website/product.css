@@ -1,1 +1,177 @@
-/*# sourceMappingURL=product.css.map */
+.product {
+  margin: 0%;
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0px 0px;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+}
+.product .watch {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+  background-color: #f1f1f1;
+  padding: 0px 20px;
+}
+.product .watch .title {
+  height: 150px;
+  text-align: center;
+  margin: 30px;
+}
+.product .watch .title h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+.product .watch .title h5 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.product .watch .title .line {
+  width: 180px;
+  height: 2px;
+  background-color: #8e55ed;
+  border-radius: 2px;
+  margin: -30px auto;
+}
+.product .watch p {
+  max-width: 600px;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.381002381;
+  text-align: center;
+}
+.product .watch .image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .specWatch, .product .button {
+  margin: 0%;
+  background-color: #eaeaea;
+  padding: 0px 20px;
+}
+.product .specWatch .container, .product .button .container {
+  max-width: 600px;
+  margin: 0px auto;
+}
+.product .specWatch .container .title, .product .button .container .title {
+  width: min-content;
+  margin: 60px 0px 80px;
+}
+.product .specWatch .container .title h4, .product .button .container .title h4 {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.product .specWatch .container .title .line, .product .button .container .title .line {
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #8e55ed;
+  margin: -30px 0px;
+}
+.product .specWatch .container p, .product .button .container p {
+  max-width: 600px;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.381002381;
+}
+.product .specWatch .container .listAndPic, .product .button .container .listAndPic {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.product .specWatch .container .listAndPic ul, .product .button .container .listAndPic ul {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-left: -40px;
+}
+.product .specWatch .container .listAndPic ul li, .product .button .container .listAndPic ul li {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #8e55ed;
+}
+.product .button {
+  background-color: #f1f1f1;
+  padding-bottom: 30px;
+}
+.product .button .container .title {
+  width: 300px;
+  margin-bottom: 10px;
+}
+.product .button .container .title .line {
+  width: 97%;
+  margin: -30px 0px -20px;
+}
+.product .button .container .title h5 {
+  font-size: 1em;
+  font-weight: 400;
+}
+.product .button .container .images {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product .button .container .images img {
+  width: 20%;
+  opacity: 40%;
+  transition: all 250ms ease-in-out;
+}
+.product .button .container .images img.active {
+  opacity: 100%;
+  width: 25%;
+}
+.product .button .container .images img:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .specWatch .container p {
+    margin-bottom: 30px;
+  }
+  .specWatch .container .listAndPic {
+    position: relative;
+    flex-direction: column;
+    height: 540px;
+  }
+  .specWatch .container .listAndPic img {
+    width: 200px;
+    height: 340px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+  }
+  .button .images {
+    position: relative;
+  }
+  .button .images img {
+    width: 30%;
+    position: absolute;
+  }
+  .button .images img.active {
+    width: 30%;
+  }
+  .button .images img:nth-child(2) {
+    top: 20%;
+  }
+  .button .images img:nth-child(1) {
+    bottom: 15%;
+    left: 20%;
+  }
+  .button .images img:nth-child(3) {
+    bottom: 15%;
+    right: 20%;
+  }
+}/*# sourceMappingURL=product.css.map */

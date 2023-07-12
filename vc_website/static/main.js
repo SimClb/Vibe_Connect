@@ -67,3 +67,33 @@ function removeMenu() {
         counterMobile += 1;
     }
 }
+
+// btn show 
+
+let silverBtn = document.getElementById('silver');
+let simpleBtn = document.getElementById('simple');
+let mainBtn = document.getElementById('main');
+
+function silver() {
+    
+    silverBtn.classList.add('active');
+    simpleBtn.classList.remove('active');
+    mainBtn.classList.remove('active');
+
+}
+
+function main() {
+
+    silverBtn.classList.remove('active');
+    simpleBtn.classList.remove('active');
+    mainBtn.classList.add('active');
+
+}
+
+function simple() {
+
+    silverBtn.classList.remove('active');
+    simpleBtn.classList.add('active');
+    mainBtn.classList.remove('active');
+
+}

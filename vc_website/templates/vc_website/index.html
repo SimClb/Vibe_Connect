@@ -10,20 +10,84 @@
 
 {% block content %}
 
-<section class="product">
+<section class="product" id="seeMore">
 
-    <div class="watch">
+    <div class="watch" id="watch">
+
+        <div class="title">
+            <h3>One watch</h3>
+            <div class="line"></div>
+            <h5>Communication is calling you</h5>
+        </div>
+
+        <p>
+            Be in the right place at the right time. it's important to note that our solution was designed with productivity and efficiency in mind. They allow seamless communication
+            between employees and customers, reducing the need for overhiring and streamlining processes.
+        </p>
+
+        <div class="image">
+            <img src="{% static 'montreOne.webp' %}" alt="montre en intégralité affichant un appelle">
+        </div>
+    </div>
+
+    <div class="specWatch">
+
+        <div class="container">
+            <div class="title">
+                <h4>Specifications</h4>
+                <div class="line"></div>
+            </div>
+
+            <p>
+                We know that you are searching for something easy to use, but often who says handy says unattractive. Don’t compromise your aesthetic for practicality.
+                We are eager to simplify your life and business by offering an elegant and discreet watch whose lifespan will exceed 70h. Water will not be a problem with the presence of IPX67 allowing our watch to be emerged up to 1m of water for 30 mins.
+
+            </p>
+
+            <div class="listAndPic">
+                <ul>
+                    <li>72 hours of autonomy</li>
+                    <li>IPX67 rank Waterproof</li>
+                    <li>Classy, elegant, and discreet</li>
+                    <li>Easy to use</li>
+                    <li>Comfortable</li>
+                </ul>
+
+                <img src="{% static 'faceWatch.png' %}" alt="cadran montre affichant un appelle">
+            </div>
+        </div>
+    </div>
+
+    <div class="button" id="button">
+
+        <div class="container">
+
+            <div class="title">
+                <h4>Many types of button</h4>
+                <div class="line"></div>
+                <h5>Like that we have what you need</h5>
+            </div>
+
+            <div class="images">
+                <img src="{% static 'simpleBtn.png' %}" alt="bouton vibe connect" id="simple" onclick="simple()">
+                <img src="{% static 'mainBtn.png' %}" alt="bouton vibe connect" class="active" id="main" onclick="main()">
+                <img src="{% static 'silverone.png' %}" alt="bouton vibe connect" id="silver" onclick="silver()">
+            </div>
+
+            <p>
+                At the core of our philosophy is a dedication to innovate and excel. Our smartwatch rental service revolutionizes communication for businesses, delivering a seamless and efficient experience for employees and customers. With the Wireless Receiver, customers can send direct notifications to the relevant staff, providing precise location and purpose for immediate assistance and not be limited about the disctance !
+            </p>
+
+        </div>
 
     </div>
 
-    <div class="Button">
+</section>
 
-    </div>
-    
-    <div class="Dashboard">
+<section class="contact">
+    <form action="" method="POST">
 
-    </div>
-
+    </form>
 </section>
 
 
