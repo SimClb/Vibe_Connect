@@ -218,7 +218,7 @@ header {
             align-items: center;
 
             text-decoration: none;
-            color: $logo;
+            color: $white;
 
             overflow: hidden;
 
@@ -252,5 +252,26 @@ header {
         }
     }
 
+    // H1 title 
+    .titleH1 {
+        color: $white;
+        position: absolute;
+        bottom: 220px;
+        left: 7%;
+        width: 80%;
 
+        span {
+            border-bottom: 3px solid $logo;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .titleH1 {
+            font-size: 1.5em;
+
+            br {
+                display: none;
+            }
+        }
+    }
 }

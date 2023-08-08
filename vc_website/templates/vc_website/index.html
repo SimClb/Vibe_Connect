@@ -10,6 +10,51 @@
 
 {% block content %}
 
+<div class="slider-container">
+    <div class="title">
+        <h3>Companies who've trusted us</h3>
+        <div class="line"></div>
+    </div>
+    <div class="slider">
+        <div class="slide-track">
+
+            <div class="slide">
+                <img src="{% static 'vvLogo.png' %}" alt="logo Van Der Valk">
+            </div>
+
+            <!--
+            <div class="slide">
+                <img src="{% static 'theHotel.png' %}" alt="logo the hotel">
+            </div>
+            -->
+            <div class="slide">
+                <img src="{% static 'clabots.png' %}" alt="logo Clabots">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'vvLogo.png' %}" alt="logo Van Der Valk">
+            </div>
+
+            <!--
+            <div class="slide">
+                <img src="{% static 'theHotel.png' %}" alt="logo the hotel">
+            </div>
+            -->
+            <div class="slide">
+                <img src="{% static 'clabots.png' %}" alt="logo Clabots">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'vvLogo.png' %}" alt="logo Van Der Valk">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'clabots.png' %}" alt="logo Clabots">
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="product" id="seeMore">
 
     <div class="watch" id="watch">
@@ -74,9 +119,45 @@
                 <img src="{% static 'silverone.png' %}" alt="bouton vibe connect" id="silver" onclick="silver()">
             </div>
 
-            <p>
+            <div class="speechContainer">
+                <div id="simBSpeech" class="speech">
+                    <p>
+                        The simple command has been created for company who doesn't need load's of button, company who
+                        need simplicity. Just one button for one type call. 
+                    </p>
+                </div>
+                <div id="mainBSpeech" class="speech active">
+                    <p>
+                        The main command is the basic restaurant command. With those 3 buttons; 'call', 'bill' and 'cancel', 
+                        you will be able to know everything is going on your tables. 
+                    </p>
+                </div>
+                <div id="silBSpeech" class="speech">
+                    <p>
+                        The silver command is for restaurant who wants all of specifications of main command
+                        but with a fancy style. For premium restaurants. 
+                    </p>
+                </div>
+            </div>
+
+            <p class="spec">
                 At the core of our philosophy is a dedication to innovate and excel. Our smartwatch rental service revolutionizes communication for businesses, delivering a seamless and efficient experience for employees and customers. With the Wireless Receiver, customers can send direct notifications to the relevant staff, providing precise location and purpose for immediate assistance and not be limited about the disctance !
             </p>
+
+            <div class="prisContainer">
+
+                <p id="simplePrise" class="prise">
+                    4€/command/month
+                </p>
+
+                <p id="mainPrise" class="prise active">
+                    5€/command/month
+                </p>
+
+                <p id="silverPrise" class="prise">
+                    7€/command/month
+                </p>
+            </div>
 
         </div>
 

@@ -149,7 +149,7 @@ header .absoluteBtn .divcoverMore {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #8e55ed;
+  color: #f1f1f1;
   overflow: hidden;
 }
 header .absoluteBtn .divcoverMore .bgLink {
@@ -172,4 +172,22 @@ header .absoluteBtn .divcoverMore:hover i, header .absoluteBtn .divcoverMore:foc
 }
 header .absoluteBtn .divcoverMore:hover .bgLink, header .absoluteBtn .divcoverMore:focus .bgLink {
   left: 0px;
+}
+header .titleH1 {
+  color: #f1f1f1;
+  position: absolute;
+  bottom: 220px;
+  left: 7%;
+  width: 80%;
+}
+header .titleH1 span {
+  border-bottom: 3px solid #8e55ed;
+}
+@media (max-width: 800px) {
+  header .titleH1 {
+    font-size: 1.5em;
+  }
+  header .titleH1 br {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */

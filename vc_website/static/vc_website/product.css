@@ -105,6 +105,9 @@
   background-color: #f1f1f1;
   padding-bottom: 30px;
 }
+.product .button .container {
+  position: relative;
+}
 .product .button .container .title {
   width: 300px;
   margin-bottom: 10px;
@@ -136,6 +139,38 @@
 .product .button .container .images img:hover {
   cursor: pointer;
 }
+.product .button .container .speechContainer {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.product .button .container .speechContainer .speech {
+  display: none;
+  position: absolute;
+  transform: translateY(-100px);
+  transition: all 250ms ease-in-out;
+}
+.product .button .container .speechContainer .speech.active {
+  display: block;
+  transform: translateY(0px);
+}
+.product .button .container .spec {
+  background-color: #f1f1f1;
+}
+.product .button .container .prisContainer {
+  color: #8e55ed;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  transition: all 250ms ease-in-out;
+}
+.product .button .container .prisContainer p {
+  position: absolute;
+  transform: translateY(-100px);
+}
+.product .button .container .prisContainer p.active {
+  transform: translateY(0px);
+}
 
 @media (max-width: 500px) {
   .specWatch .container p {
@@ -155,6 +190,7 @@
   }
   .button .images {
     position: relative;
+    margin-bottom: 30px;
   }
   .button .images img {
     width: 30%;

@@ -74,26 +74,59 @@ let silverBtn = document.getElementById('silver');
 let simpleBtn = document.getElementById('simple');
 let mainBtn = document.getElementById('main');
 
+let silvSpeech = document.getElementById('silBSpeech');
+let simpSpeech = document.getElementById('simBSpeech');
+let mainSpeech = document.getElementById('mainBSpeech');
+
+let silverPrise = document.getElementById('silverPrise');
+let simplePrise = document.getElementById('simplePrise');
+let mainPrise = document.getElementById('mainPrise');
+
 function silver() {
     
     silverBtn.classList.add('active');
+    silvSpeech.classList.add('active');
+    silverPrise.classList.add('active');
+
     simpleBtn.classList.remove('active');
+    simpSpeech.classList.remove('active'); 
+    simplePrise.classList.remove('active');
+
     mainBtn.classList.remove('active');
+    mainSpeech.classList.remove('active');
+    mainPrise.classList.remove('active');
+
 
 }
 
 function main() {
 
-    silverBtn.classList.remove('active');
-    simpleBtn.classList.remove('active');
     mainBtn.classList.add('active');
+    mainSpeech.classList.add('active');
+    mainPrise.classList.add('active');
+
+    simpleBtn.classList.remove('active');
+    simpSpeech.classList.remove('active');
+    simplePrise.classList.remove('active');
+
+    silverBtn.classList.remove('active');
+    silvSpeech.classList.remove('active');
+    silverPrise.classList.remove('active');
 
 }
 
 function simple() {
 
-    silverBtn.classList.remove('active');
     simpleBtn.classList.add('active');
+    simpSpeech.classList.add('active');
+    simplePrise.classList.add('active');
+
+    silverBtn.classList.remove('active');
+    silvSpeech.classList.remove('active');
+    silverPrise.classList.remove('active');
+
     mainBtn.classList.remove('active');
+    mainSpeech.classList.remove('active');
+    mainPrise.classList.remove('active');
 
 }
