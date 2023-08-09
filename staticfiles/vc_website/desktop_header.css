@@ -1,0 +1,91 @@
+@media (min-width: 600px) {
+  header .nav__mobile {
+    display: none;
+  }
+  header nav.primary-navigation {
+    display: flex;
+    position: fixed;
+    text-align: center;
+    font-size: 16px;
+  }
+  header nav.primary-navigation img {
+    margin: 17.5px 0px 0px 20px;
+  }
+  header nav.primary-navigation ul {
+    margin: 22px 0px 0px 60px;
+  }
+  header nav.primary-navigation ul li {
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 30px;
+    color: white;
+  }
+  header nav.primary-navigation ul li:hover {
+    cursor: pointer;
+  }
+  header nav.primary-navigation ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: all 150 ease-in-out;
+  }
+  header nav.primary-navigation ul li a:hover {
+    color: #8e55ed;
+  }
+  header nav.primary-navigation ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding-left: 0;
+    left: 0;
+    display: none;
+    background: #2e2e35;
+  }
+  header nav.primary-navigation ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+  }
+  header nav.primary-navigation ul li ul li a {
+    transition: all 0.5s ease;
+  }
+  header nav.primary-navigation ul li ul li a:hover {
+    padding-left: 10px;
+    border-left: 2px solid #8e55ed;
+    transition: all 0.3s ease;
+  }
+  header nav.primary-navigation .li_center {
+    border-left: 2px solid #8e55ed;
+    border-right: 2px solid #8e55ed;
+  }
+  header nav.primary-navigation .li_center i {
+    transition: all 100ms ease-in-out;
+  }
+  header nav.primary-navigation .li_center:hover i {
+    transform: rotate(90deg);
+  }
+  header nav.primary-navigation ul li:hover > ul,
+header nav.primary-navigation ul li ul:hover {
+    margin-top: 5px;
+    margin-left: 0px;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 250px;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #555555;
+    border-radius: 2px;
+  }
+}
+@media (max-width: 600px) {
+  .primary-navigation {
+    display: none;
+  }
+}/*# sourceMappingURL=desktop_header.css.map */

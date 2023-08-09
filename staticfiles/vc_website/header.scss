@@ -1,0 +1,277 @@
+// colors
+
+$navbar: #d4b8d7;
+$links: #333;
+$logo: #8e55ed;
+
+$lightBlack: #1f1f23;
+$black: #0e0e10;
+$middleBlack: #18181b;
+$heavyBlack: #2e2e35;
+
+$white: #f1f1f1;
+
+
+
+header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+
+    .nav {
+        position: fixed;
+        width: 100%;
+
+        z-index: 3;
+
+        img {
+            width: 80px;
+            height: 36px;
+            margin: 17.5px 0px 0px 10px;
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 4;
+
+        }
+
+        &__mobile {
+
+            .burger {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 25px;
+                height: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                z-index: 8;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .line {
+                    width: 100%;
+                    height: 5px;
+                    background-color: $logo;
+                    border-radius: 2px;
+                    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                        opacity 0.55s ease;
+                }
+
+            }
+
+            .cross {
+                .line {
+                    &:nth-child(1) {
+                        transform: translateY(2px) rotate(45deg);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(-8px) rotate(-45deg);
+                    }
+                }
+            }
+
+            .menu {
+                z-index: 7;
+                position: absolute;
+                right: -150%;
+                top: 0px;
+                width: 90%;
+                height: 100vh;
+                box-shadow: 30px 50px 100px #85888C;
+
+                display: flex;
+                align-items: center;
+                text-align: left;
+                background-color: $heavyBlack;
+
+                transition: all 250ms ease-in-out;
+
+                ul {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 1.4em;
+                    }
+
+                    li {
+                        margin: 20px 0px;
+
+                        ::selection {
+                            color: none;
+                            background: none;
+                        }
+
+                        /* For Mozilla Firefox */
+                        ::-moz-selection {
+                            color: none;
+                            background: none;
+                        }
+
+                        i {
+                            color: $logo;
+                        }
+
+                        i,
+                        ul {
+                            transition: all 250ms ease-in-out;
+                        }
+
+                        ul {
+                            display: none;
+
+                            li {
+                                margin: 10px;
+                                border-left: 3px solid $logo;
+                                padding: 0px;
+                                padding-left: 10px;
+                            }
+
+                            a {
+                                font-size: 1.1em;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        .angleDownMobile {
+                            transform: rotate(90deg);
+                        }
+
+                        .showUlMobile {
+                            display: block;
+                        }
+                    }
+
+
+                }
+            }
+
+            .video {
+                z-index: -1;
+            }
+
+        }
+
+        &__desktop {
+            display: none;
+        }
+    }
+
+    video {
+        z-index: -1;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0%;
+    }
+
+    .background_nav {
+        width: 100%;
+        height: 71px;
+        background-color: $middleBlack;
+        position: fixed;
+        top: -71px;
+        z-index: 2;
+        transition: all 150ms ease-in;
+
+        &__show {
+            top: 0px;
+        }
+    }
+
+
+
+    // discover more btn 
+    
+    $heightBtn: 30px;
+
+    .absoluteBtn {
+        width: 100%;
+        height: $heightBtn;
+        position: absolute;
+        bottom: 80px;
+        
+        .divcoverMore {
+            position: relative;
+            width: 200px;
+            height: $heightBtn;
+            margin: 0px auto;
+            border: 3px solid $logo;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: $white;
+
+            overflow: hidden;
+
+            .bgLink {
+                width: 201px;
+                height: $heightBtn + 1px;
+                background-color: $logo;
+                position: absolute;
+                left: -201px;
+                transition: all 350ms ease-in;
+                z-index: 0;
+            }
+
+            i {
+                transition: transform 550ms ease-in-out, color 50ms ease-in-out;
+                margin-right: 10px;
+                z-index: 1;
+            }
+
+            &:hover, &:focus {
+
+                i {
+                    transform: translateX(100px);
+                    color: $white;
+                }
+                .bgLink {
+                    left: 0px;
+                }
+            }
+
+        }
+    }
+
+    // H1 title 
+    .titleH1 {
+        color: $white;
+        position: absolute;
+        bottom: 220px;
+        left: 7%;
+        width: 80%;
+
+        span {
+            border-bottom: 3px solid $logo;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .titleH1 {
+            font-size: 1.5em;
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
